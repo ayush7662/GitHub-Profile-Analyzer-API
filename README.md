@@ -2,6 +2,16 @@
 
 A professional backend service that analyzes GitHub user profiles using the GitHub public API and stores useful insights in a MySQL database.
 
+## ☯️ Live API url: https://github-profile-analyzer-api-o82k.onrender.com 
+
+## Example  Endpoint: https://github-profile-analyzer-api-o82k.onrender.com/api/profiles
+
+##  Test API:   https://github-profile-analyzer-api-o82k.onrender.com/api/profiles/ayush7662
+```
+{"success":true,"message":"Profile analyzed and saved successfully","data":{"id":2,"username":"ayush7662","avatar_url":"https://avatars.githubusercontent.com/u/127328301?v=4","name":"AYUSH RAJ","bio":"I am a  NIT Rourkela student right now and a self taught programmer. I have been programming for more than 3 years now. I have worked on many projects.","public_repos":83,"followers":1,"following":2,"created_at":"2023-03-08T15:47:57.000Z","updated_at":"2026-05-26T03:46:28.000Z","location":"rourkela","company":"NOTHING","blog":"https://auth.geeksforgeeks.org/invite/xxjfgec5/","email":null,"type":"User","site_admin":0}}
+```
+   
+
 ## 🚀 Features
 
 - **Fetch GitHub Profile Data**: Retrieve comprehensive profile information using GitHub username
@@ -71,10 +81,8 @@ This will create a database named `github_analyzer` with a `profiles` table.
 Create a `.env` file in the root directory by copying the example:
 
 ```bash
-cp .env.example .env
+.env
 ```
-
-Edit the `.env` file with your configuration:
 
 ```env
 # Server Configuration
@@ -94,11 +102,6 @@ GITHUB_TOKEN=your_github_token_here
 
 ### 5. Get GitHub Personal Access Token (Optional but Recommended)
 
-1. Go to https://github.com/settings/tokens
-2. Click "Generate new token" → "Generate new token (classic)"
-3. Select scopes: `public_repo` (or `read:user` for more data)
-4. Generate and copy the token
-5. Paste it in your `.env` file
 
 **Note**: Without a token, GitHub API has rate limits (60 requests/hour). With a token, you get 5,000 requests/hour.
 
@@ -307,7 +310,7 @@ github-profile-analyzer/
 │   └── profileRoutes.js     # API routes
 ├── services/
 │   └── githubService.js     # GitHub API service
-├── .env.example             # Environment variables example
+├── .env                     # Environment variables example
 ├── .gitignore              # Git ignore file
 ├── package.json            # Project dependencies
 ├── README.md               # This file
@@ -353,7 +356,7 @@ This project is licensed under the ISC License.
 
 ## 👨‍💻 Author
 
-Built as a Node.js Intern assignment.
+Ayush Raj
 
 ## 🙏 Acknowledgments
 
